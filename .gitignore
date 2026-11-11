@@ -1,0 +1,37 @@
+# --- Vault passwords and plaintext secrets: never commit ---
+# Encrypted vault files (group_vars/all/vault.yml, *.vault.yml) ARE committed.
+.vault_pass
+.vault_pass.*
+*vault_pass*
+*.vault_password
+vault-password*
+*.secret.yml
+*.secrets.yml
+secrets.yml
+.env
+.env.*
+!.env.example
+
+# --- Ansible runtime and generated files ---
+*.retry
+.ansible/
+fact_cache/
+ansible_facts/
+
+# --- Galaxy-installed content (declared in requirements.yml) ---
+collections/ansible_collections/
+roles/galaxy/
+roles/external/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Editors and OS ---
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
